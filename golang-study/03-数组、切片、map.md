@@ -11,3 +11,6 @@
 3. 切片slice
 	1. 很明显啊，go里面的数组，长度被限制死了，所以不经常用，所以go出了一个数组plus，叫做slice（切片），切片（Slice）相较于数组更灵活，因为在声明切片后其长度是可变的
 	2. func main() { // 定义一个字符串切片 var list []string list = append(list, "枫枫") list = append(list, "知道") fmt.Println(list) fmt.Println(len(list)) // 切片长度 // 修改第二个元素 list[1] = "不知道" fmt.Println(list) }
+4. make函数
+	1. 除了基本数据类型，其他数据类型如果只定义不赋值，那么实际的值就是nil
+	2. 
