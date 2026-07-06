@@ -13,4 +13,7 @@
 	2. func main() { // 定义一个字符串切片 var list []string list = append(list, "枫枫") list = append(list, "知道") fmt.Println(list) fmt.Println(len(list)) // 切片长度 // 修改第二个元素 list[1] = "不知道" fmt.Println(list) }
 4. make函数
 	1. 除了基本数据类型，其他数据类型如果只定义不赋值，那么实际的值就是nil
-	2. 
+	2. // 定义一个字符串切片 var list []string fmt.Println(list == nil) // true
+	3. 那么我们可以通过make函数创建知道长度，指定容量的切片了
+		1. make([]type, length, capacity)
+	4. 
