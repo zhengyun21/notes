@@ -6,10 +6,10 @@
 	 1. 缓存是否正常读写创建
 	 2. 有无5小时 7天速率限制（claude套餐pro 还是max），有没有被过滤
 	 3. 能否使用沙箱
-	 4. 能否调用websearch工具、工具版本是旧的还是新的
+	 4. 能否调用websearch工具、工具版本是旧的还是新的、工具版本是否有限制
 	 5. 响应头特征
 	 6. 速率限制
-	 7. 模型来源渠道（aws、官方、azure、vertex、假模型、openrouter、amazon bedrock、）
+	 7. 模型来源渠道（aws、官方、azure、vertex、假模型、openrouter、amazon bedrock、cloudflare、vercel、）
 	 8. 有没有被中途注入提示词
 	 9. 是否支持流式输出
 	 10. max_token有没有异常
@@ -17,6 +17,8 @@
 	 12. temperature 参数有没有生效
 	 13. 智商测试
 	 14. 响应速度
+	 15. 支不支持 thinking（有没有有加密思考签名thinkingZ$6b166c00-5e79-4b64-b9e9-d68faf4f9184）
+	 16. 篡改和删除签名是否能通过
 ## 三、检测方法
 ### 1. 准备一道复杂数学推理题，在中转站和官方上面跑一遍对比回答质量。
 ### 2. 查看响应字段
@@ -24,3 +26,4 @@
 	2. Token消耗
 	3. 响应速度
 	4. 模型渠道（aws、官方、azure、vertex、假模型、openrouter、amazon bedrock） 
+
