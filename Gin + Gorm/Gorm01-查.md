@@ -109,6 +109,28 @@ db.Where("name LIKE ?", "%三%")
 	.Limit(5) 
 	.Find(&users)
 ```
+7. **分页查询**
+``` go
+var dataList []List 
+// 查询全部数据 or 查询分页数据 
+pageSize, _ := strconv.Atoi(ctx.Query("pageSize")) 
+pageNum, _ := strconv.Atoi(ctx.Query("pageNum")) 
+// 判断是否需要分页 
+if pageSize == 0 {
+	 pageSize = -1 
+} 
+if pageNum == 0 { 
+	 pageNum = -1 
+} 
+offsetVal := (pageNum - 1) * pageSize // 固定写法 记住就行 
+if pageNum == -1 && pageSize == -1 { 
+	 offsetVal = -1 
+} 
+// 返回一个总数 
+var total int64 
+// 查询数据库
+db.Model(dataList).Count(&total).Limit(pageSize).Offset(offsetVal).Find(&dataList)
+```
 7. **注意事项**
 	1. **零值问题**：结构体条件查询会忽略零值字段（如`0`、`""`、`false`），改用`map`条件可避免
 	2. **软删除**：使用`gorm.Model`的模型默认支持软删除，已删除记录不会被查询
