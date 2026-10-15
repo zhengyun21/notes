@@ -1,2 +1,5 @@
-1. MAC：类似身份证，烧录在网卡设备里，没有身份证就没办法进行上网
-2. ARP：Address Resolution Protocol 地址解析协议，光有ip还不够，通过ARP手段获取ip对应的MAC地址才能把内容发送过去给对方。
+1. **MAC**：类似身份证，烧录在网卡设备里，没有身份证就没办法进行上网
+
+2. **ARP（Address Resolution Protocol，地址解析协议）** 是 TCP/IP 协议族中用于 **IPv4 地址解析为 MAC 地址** 的协议。它工作在数据链路层和网络层之间，主要用于同一广播域内：已知对方 IP，但不知道对方 MAC 时，通过 ARP 获取。
+
+3. **SSDP（Simple Service Discovery Protocol，简单服务发现协议）** 是 **UPnP（通用即插即用）** 体系中的“设备发现”协议。它让设备和控制点（电脑、手机、电视、路由器等）在局域网内自动发现彼此，不需要手动配置 IP 或服务地址。

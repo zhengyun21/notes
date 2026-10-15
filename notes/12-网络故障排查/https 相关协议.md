@@ -1,0 +1,1 @@
+1. **SSLv2** 指 **SSL（Secure Sockets Layer）协议 2.0 版**，由 Netscape 在 1995 年发布。它早已被 **SSLv3、TLS 1.0/1.1/1.2/1.3** 取代，并且被认为**不安全、已废弃**。RFC 6176 明确禁止使用 SSLv2。
